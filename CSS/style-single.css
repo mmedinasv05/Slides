@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.section-slide{
+    width: 100%;
+    height: 100vh;
+    background-color: #333439;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.title-slide{
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+}
+.box-slide{
+    width: 50%;
+    padding: 0.5rem 0;
+    margin: 2rem auto;
+    text-align: center;
+    overflow-x: hidden;
+    border-radius: 10px;
+}
+.box-slide input{
+    display: none;
+}
+.slides{
+    width: 500%;
+    display: flex;
+    list-style: none;
+    transition: transform .5s ease-in-out;
+    padding: 0;
+}
+.slides .slide{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 0 20px;
+    padding: 0.5rem;
+}
+.slides .slide blockquote{
+    color: #ffffff;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    line-height: 18px;
+}
+.slides .slide h3{
+    color: #ffffff;
+}
+.slides .slide h6{
+    color: #ffffff;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+}
+.box-slide label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 30px 5px 0 5px;
+}
+
+#slide-1:checked ~ .slides{
+    transform: translateX(0%);
+}
+#slide-2:checked ~ .slides{
+    transform: translateX(-20%);
+}
+#slide-3:checked ~ .slides{
+    transform: translateX(-40%);
+}
+#slide-4:checked ~ .slides{
+    transform: translateX(-60%);
+}
+#slide-5:checked ~ .slides{
+    transform: translateX(-80%);
+}
+
+#slide-1:checked ~ .slide-nav label#dot-1{
+    background-color: #ffffff;
+}
+#slide-2:checked ~ .slide-nav label#dot-2{
+    background-color: #ffffff;
+}
+#slide-3:checked ~ .slide-nav label#dot-3{
+    background-color: #ffffff;
+}
+#slide-4:checked ~ .slide-nav label#dot-4{
+    background-color: #ffffff;
+}
+#slide-5:checked ~ .slide-nav label#dot-5{
+    background-color: #ffffff;
+}
+
+
+
+
+/*sm*/
+@media screen and (max-width: 540px){
+    .box-slide{
+        width: 95%;
+        padding: 1.5rem 1rem;
+    }
+    .slides{
+        width: 500%;
+    }
+}
+
+
+/*md*/
+@media (min-width: 541px) and (max-width: 720px){
+    .box-slide{
+        width: 80%;
+        padding: 1.5rem 0;
+    }
+    .slides .slide{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        margin: 0 40px;
+        padding: 0.5rem;
+    }
+    .slides{
+        width: 500%;
+    }
+}
